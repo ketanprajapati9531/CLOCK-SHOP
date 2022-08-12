@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  background: white;
+  line-height: 10vh;
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+nav label {
+  display: none;
+}
+
+nav li {
+  display: inline;
+}
+
+#nav-button {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: arial;
+  padding: 0px 10px;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  nav {
+    align-items: center;
+    width: 768px;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    left: 0;
+    margin: auto;
+    background: #4a0060;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+  }
+
+  nav li {
+    display: block;
+    width: 100%;
+    padding: 5px;
+  }
+
+  nav label {
+    display: block;
+    padding: 0px 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  nav label:hover {
+    color: black;
+  }
+
+  nav a {
+    width: 100%;
+    display: block;
+  }
+
+  #nav-button:checked~ul {
+    max-height: 540px;
+    transition: all 1s ease-in-out;
+  }
+
+  nav li:hover {
+    background: darkpurple;
+  }
+}
+
+/*-----------home---------------*/
+.flex {
+  display: flex;
+}
+
+.left, .right {
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.ltop {
+  margin-top: 15%;
+}
+
+.top {
+  margin-top: 10%;
+}
+
+.mtop {
+  margin-top: 5%;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #cbaa48;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home {
+  background: #d0d5db;
+  height: 90vh;
+  top: 80px;
+  position: relative;
+  z-index: -1;
+}
+
+.home h5 {
+  font-size: 22px;
+}
+
+.home h1 {
+  font-size: 60px;
+  font-weight: 300;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.home h4 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/*-----------home---------------*/
+/*-----------offer---------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+button {
+  background: none;
+  border: 2px solid black;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.offer .box:nth-child(1) {
+  background: #e9c9d4;
+}
+
+.offer .box:nth-child(2) {
+  background: #b6e5eb;
+}
+
+.offer .box1 {
+  background: #b6e5eb;
+}
+
+.offer .left, .text {
+  padding: 40px;
+}
+
+.offer p {
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.margin {
+  margin: 20px;
+}
+
+.offer .box2 .left {
+  margin-right: 20px;
+}
+
+.offer .box:nth-child(3) {
+  background: #e7eaed;
+}
+
+.offer .box2 .img {
+  background: #e7eaed;
+  width: 300px;
+}
+
+.offer .box2 h3 {
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+/*-----------offer---------------*/
+/*-----------wrapper---------------*/
+.center {
+  text-align: center;
+}
+
+.wrapper .item {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wrapper .container {
+  background: #f9ecf1;
+}
+
+.wrapper .content {
+  padding: 50px;
+  max-width: 60%;
+  margin: auto;
+}
+
+.wrapper .item {
+  opacity: 0.7;
+}
+
+.wrapper i {
+  font-size: 50px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.wrapper h3 {
+  font-weight: 300;
+}
+
+.wrapper p {
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+/*-----------wrapper---------------*/
+/*-----------portfolio---------------*/
+.portfolio .left {
+  width: 40%;
+  background: #d0d5db;
+  margin: 20px;
+}
+
+.portfolio .right {
+  width: 60%;
+  margin: 20px;
+  position: relative;
+}
+
+.portfolio .right .img {
+  /*  width: 340px;
+  height: 340px;*/
+  background: #d0d5db;
+  overflow: hidden;
+}
+
+.portfolio .box {
+  position: relative;
+  width: 340px;
+  height: 340px;
+}
+
+.portfolio .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.portfolio .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.portfolio .box:hover .image {
+  opacity: 0.3;
+  transform: scale(1.2);
+}
+
+.portfolio .box:hover .middle {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.portfolio .right .text {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  width: 340px;
+  height: 340px;
+}
+
+.portfolio .right .text h4 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.portfolio .right .text h3 {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.portfolio .left .text {
+  margin-top: 40%;
+}
+
+/*-----------portfolio---------------*/
+/*-----------pick---------------*/
+.pick .right {
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+}
+
+.pick .right .box {
+  width: 295px;
+  height: 295px;
+  background: #d0d5db;
+  overflow: hidden;
+}
+
+.pick .right .text {
+  width: 295px;
+  height: 295px;
+  position: relative;
+}
+
+.pick i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.pick span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 20px;
+  border-radius: 50px;
+  background: white;
+  color: red;
+  font-size: 10px;
+}
+
+.pick .text h4 {
+  margin-top: 150px;
+}
+
+/*-----------pick---------------*/
+/*-----------news---------------*/
+.news .content {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.news .content img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.news h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.news span {
+  font-size: 14px;
+  color: grey;
+}
+
+.news p {
+  margin-top: 10px;
+}
+
+.news p, h5 {
+  font-size: 15px;
+  line-height: 20px;
+  color: grey;
+}
+
+/*-----------news---------------*/
+/*-----------footer---------------*/
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+footer .grid {
+  padding-top: 40px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer h2 {
+  font-size: 20px;
+}
+
+footer ul li {
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+footer p {
+  margin-bottom: 20px;
+  color: grey;
+}
+
+.input {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.input input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.input button {
+  border: none;
+  background: white;
+  margin: 0;
+}
+
+.legal {
+  margin: 0;
+  padding: 30px;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*-----------footer---------------*/
+@media only screen and (max-width:768px) {
+
+  /*-----------home---------------*/
+  .flex {
+    display: flex;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .home .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  /*-----------home---------------*/
+  /*-----------offer---------------*/
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .offer {
+    margin-top: 30%;
+  }
+
+  .offer .box2 .img {
+    width: 100%;
+  }
+
+  /*-----------offer---------------*/
+  /*-----------wrapper---------------*/
+  .wrapper .content {
+    max-width: 100%;
+  }
+
+  /*-----------wrapper---------------*/
+  /*-----------portfolio---------------*/
+  .portfolio .left {
+    width: 100%;
+  }
+
+  .portfolio .right {
+    width: 100%;
+  }
+
+  .portfolio .container {
+    flex-direction: column;
+  }
+
+  .portfolio .box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio .right .text {
+    width: 650px;
+    height: 650px;
+  }
+
+  /*-----------portfolio---------------*/
+  /*-----------pick---------------*/
+  .pick .right {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pick .right .box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pick .right .text {
+    width: 650px;
+    height: 650px;
+  }
+
+  /*-----------pick---------------*/
+  /*-----------news---------------*/
+  .news .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*-----------news---------------*/
+  /*-----------footer---------------*/
+  footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .legal {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+
+  /*-----------home---------------*/
+  .flex {
+    display: flex;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .home .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  /*-----------home---------------*/
+  /*-----------offer---------------*/
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .offer {
+    margin-top: 30%;
+  }
+
+  .offer .box2 .img {
+    width: 100%;
+  }
+
+  /*-----------offer---------------*/
+  /*-----------wrapper---------------*/
+  .wrapper .content {
+    max-width: 100%;
+  }
+
+  /*-----------wrapper---------------*/
+  /*-----------portfolio---------------*/
+  .portfolio .left {
+    width: 100%;
+  }
+
+  .portfolio .right {
+    width: 100%;
+  }
+
+  .portfolio .container {
+    flex-direction: column;
+  }
+
+  .portfolio .box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio .right .text {
+    width: 650px;
+    height: 650px;
+  }
+
+  /*-----------portfolio---------------*/
+  /*-----------pick---------------*/
+  .pick .right {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pick .right .box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pick .right .text {
+    width: 650px;
+    height: 650px;
+  }
+
+  /*-----------pick---------------*/
+  /*-----------news---------------*/
+  .news .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*-----------news---------------*/
+  /*-----------footer---------------*/
+  footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .legal {
+    font-size: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2>KK-Brand</h2>
+      <input type="checkbox" id="nav-button">
+      </input>
+      <label for="nav-button">&#9776;</label>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shopnmn</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="home">
+    <div class="container  flex">
+      <div class="left top">
+        <h1>A warm <br>enlightenment </h1>
+        <h4>BOBBER PENDANT LIGHT</h4>
+        <h5>Buy Now</h5>
+      </div>
+      <div class="right">
+        <img src="https://images.unsplash.com/photo-1606674556490-c2bbb4ee05e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="offer top">
+    <div class="container">
+      <div class="content grid">
+        <div class="box flex">
+          <div class="left">
+            <h5>ACCESSORIES</h5>
+            <h2>Clearance Sales</h2>
+            <p>Up to 70% Off & Free Shipping</p>
+            <button name="button">ALL discount sales</button>
+          </div>
+          <div class="right">
+            <img src="https://images.unsplash.com/photo-1533749047139-189de3cf06d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="">
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <h5>ACCESSORIES</h5>
+            <h2>Clearance Sales</h2>
+            <p>Up to 70% Off & Free Shipping</p>
+            <button name="button">ALL discount sales</button>
+          </div>
+          <div class="right">
+            <img src="https://images.unsplash.com/photo-1506686098657-5eeb165b4353?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h5>ACCESSORIES</h5>
+            <h2>Huge Discount</h2>
+            <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button name="button">ALL discount sales</button>
+          </div>
+        </div>
+        <div class="box box2 grid">
+          <div class="item">
+            <div class="img">
+              <img src="https://images.unsplash.com/photo-1455651512878-0ddbb4c4d0a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="">
+            </div>
+            <h3>Norm Wall Clock</h3>
+            <p>500.00</p>
+          </div>
+          <div class="item">
+            <div class="img">
+              <img src="https://cdn.pixabay.com/photo/2017/08/12/15/09/clock-2634551_960_720.png" alt="">
+            </div>
+            <h3>Afteroon Coat Hanger </h3>
+            <p>260.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="wrapper top center">
+    <div class="container">
+      <div class="content">
+        <h5>CONNECTED SPACES</h5>
+        <h2>Redefine how we use space</h2>
+        <p> Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="item grid top">
+          <div class="box">
+            <i class="fa fa-truck"></i>
+            <h3>Free Shipping</h3>
+            <p>Duis
+              aute irure dolor in reprehenderit</p>
+          </div>
+          <div class="box">
+            <i class="fa fa-recycle"></i>
+            <h3>30 days return</h3>
+            <p>Duis
+              aute irure dolor in reprehenderit</p>
+          </div>
+          <div class="box">
+            <i class="fa fa-plane"></i>
+            <h3>International Warranty</h3>
+            <p>Duis
+              aute irure dolor in reprehenderit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="portfolio top">
+    <div class="container flex">
+      <div class="left">
+        <div class="text">
+          <h5>FEATURED</h5>
+          <h2>Portfolio</h2>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button>All Looks</button>
+        </div>
+      </div>
+
+      <div class="right grid">
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2013/07/18/09/13/cuckoo-clock-163427_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2017/12/26/20/53/girl-3041391_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2020/02/29/21/10/clocks-4891142_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2018/08/15/13/24/cuckoo-clocks-3608055_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="portfolio top pick">
+    <div class="container">
+      <div class="heading center">
+        <h2>Editor Picks</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="right grid">
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2013/07/18/09/13/cuckoo-clock-163428_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+          <i class="fa fa-heart-o"></i>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2013/09/29/06/08/watches-188010_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+          <i class="fa fa-heart-o"></i>
+          <span>-8%</span>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2019/10/17/15/50/black-forest-4557200_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+          <i class="fa fa-heart-o"></i>
+          <span>New</span>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2019/08/27/11/36/old-houses-4433982_960_720.jpg" class="image" style="width:100%">
+          </div>
+          <div class="middle">
+            <div class="text">
+              <h4>FURNITURE</h4>
+              <h3>Coat Hanger</h3>
+            </div>
+          </div>
+          <i class="fa fa-heart-o"></i>
+        </div>
+      </div>
+  </section>
+
+
+
+  <section class="news top">
+    <div class="container">
+      <div class="heading center">
+        <h2>Latest News</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="content grid mtop">
+        <div class="box">
+          <img src="https://cdn.pixabay.com/photo/2015/05/19/10/16/clock-773307_960_720.jpg" alt="">
+          <h5>DESORATION</h5>
+          <h2>Renaissance of the wall clock</h2>
+          <span>July 24 2021</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+        <div class="box">
+          <img src="https://image.shutterstock.com/image-photo/collection-vintage-clock-hanging-on-600w-561021889.jpg" alt="">
+          <h5>DESORATION</h5>
+          <h2>Renaissance of the wall clock</h2>
+          <span>July 24 2021</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+        <div class="box">
+          <img src="https://image.shutterstock.com/image-photo/vintage-wall-clocks-variety-styles-600w-440243512.jpg" alt="">
+          <h5>DESORATION</h5>
+          <h2>Renaissance of the wall clock</h2>
+          <span>July 24 2021</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container top">
+      <div class="grid">
+        <div class="box">
+          <h2>COMPANY</h2>
+          <ul>
+            <li>About Us</li>
+            <li>Store Locator</li>
+            <li>Contact</li>
+            <li>Careers</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>HELP</h2>
+          <ul>
+            <li>Order Tracking</li>
+            <li>FAQ's</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>STORE</h2>
+          <ul>
+            <li>Furniture</li>
+            <li>Decoration</li>
+            <li>Lighting</li>
+            <li>Accessories</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h2>DOT THEME</h2>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+          <div class="input flex">
+            <input type="text" placeholder="Your Email Address">
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <p class="legal">Copyright | This template is made by <i class="fa fa-heart"></i>Ketan Prajapati</p>
+
+</body>
+
+</html>
